@@ -7,12 +7,13 @@
     <style>
         body { background-color: #0a0a0c; color: #e0e0e0; font-family: 'Segoe UI', sans-serif; margin: 0; }
         nav { background: #16161a; padding: 20px; text-align: center; border-bottom: 1px solid #333; }
-        nav a { color: #00bfff; text-decoration: none; margin: 0 20px; font-weight: bold; }
+        nav a { color: #00bfff; text-decoration: none; margin: 0 20px; font-weight: bold; transition: 0.3s; }
+        nav a:hover { color: #ff8c00; }
         .container { max-width: 900px; margin: 50px auto; padding: 20px; }
         h2 { color: #ff8c00; border-bottom: 2px solid #333; padding-bottom: 10px; }
         .project { margin-bottom: 40px; background: #16161a; padding: 20px; border-radius: 8px; border-left: 4px solid #00bfff; }
         h3 { color: #00bfff; margin-top: 0; }
-        footer { background: #000; color: #555; padding: 30px; text-align: center; margin-top: 50px; }
+        footer { background: #000; color: #555; padding: 30px; text-align: center; margin-top: 50px; border-top: 1px solid #222; }
         footer a { color: #ff0000; text-decoration: none; font-weight: bold; }
         
         /* עיצוב למסגרת הסרטונים */
@@ -21,6 +22,7 @@
             border-radius: 8px;
             overflow: hidden;
             border: 1px solid #333;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
         }
     </style>
 </head>
@@ -37,9 +39,16 @@
         <h2>Key Projects</h2>
         
         <div class="project">
+            <h3>Neural-Quartz (Snowflake Fractals)</h3>
+            <p>An experimental study in AI self-healing and fractal geometry, exploring generative patterns that mirror natural evolution to create infinite, unique snowflake structures.</p>
+            <div class="video-container">
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/3RixezwCXdQ" title="Neural-Quartz Video" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="project">
             <h3>Animosaic Engine</h3>
-            <p>Our breakthrough architecture that processed 20,000,000 anime faces into a singular meta-mosaic, overcoming severe RAM limitations on consumer-grade hardware.</p>
-            <!-- סרטון ראשון -->
+            <p>Our breakthrough architecture that processed 20,000,000 anime faces into a singular meta-mosaic, overcoming severe RAM limitations on consumer-grade hardware through dynamic memory clearing.</p>
             <div class="video-container">
                 <iframe width="100%" height="315" src="https://www.youtube.com/embed/af9PxagIR1c" title="Animosaic Engine Video" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
@@ -47,19 +56,9 @@
         
         <div class="project">
             <h3>OasisAI</h3>
-            <p>A specialized Generative Adversarial Network (GAN) trained to synthesize infinite, high-resolution desert landscapes.</p>
-            <!-- סרטון שני -->
+            <p>A specialized Generative Adversarial Network (GAN) trained to synthesize infinite, high-resolution desert landscapes entirely from scratch.</p>
             <div class="video-container">
                 <iframe width="100%" height="315" src="https://www.youtube.com/embed/JIJfDgRgt4I" title="OasisAI Video" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-        </div>
-        
-        <div class="project">
-            <h3>Neural-Quartz</h3>
-            <p>An experimental study in AI self-healing and fractal geometry, exploring generative patterns that mirror natural evolution.</p>
-            <!-- סרטון שלישי -->
-            <div class="video-container">
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/3RixezwCXdQ" title="Neural-Quartz Video" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
         
