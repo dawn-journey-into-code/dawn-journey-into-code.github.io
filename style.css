@@ -1,0 +1,225 @@
+/* --- Global Styles --- */
+html {
+    scroll-behavior: smooth;
+}
+
+body { 
+    background-color: #0a0a0c; 
+    color: #e0e0e0; 
+    font-family: 'Segoe UI', sans-serif; 
+    margin: 0; 
+    display: flex; 
+    flex-direction: column; 
+}
+
+/* --- Navigation Bar (Sticky & Glassmorphism) --- */
+nav { 
+    background: rgba(22, 22, 26, 0.85); 
+    padding: 20px; 
+    text-align: center; 
+    border-bottom: 1px solid #333; 
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+nav a { 
+    color: #00bfff; 
+    text-decoration: none; 
+    margin: 0 20px; 
+    font-weight: bold; 
+    transition: 0.3s; 
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav a:hover { 
+    color: #ff8c00; 
+    text-shadow: 0 0 10px rgba(255, 140, 0, 0.6);
+}
+
+/* --- Sections Basic Setup --- */
+section {
+    padding-top: 80px; /* Offset to not hide under sticky nav */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* --- Home Section --- */
+.section-home { 
+    align-items: center; 
+    text-align: center; 
+    background: radial-gradient(circle at center, #1a1a2e 0%, #0a0a0c 100%); 
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #00bfff;
+    box-shadow: 0 0 20px rgba(0, 191, 255, 0.5);
+    margin-bottom: 20px;
+    transition: 0.5s;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255, 140, 0, 0.6);
+    border-color: #ff8c00;
+}
+
+h1 { 
+    font-size: 4.5rem; 
+    margin: 0; 
+    background: linear-gradient(90deg, #ff8c00, #00bfff); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    letter-spacing: 2px;
+}
+
+.intro { 
+    max-width: 700px; 
+    font-size: 1.25rem; 
+    color: #aaa; 
+    margin-top: 20px; 
+    line-height: 1.6;
+}
+
+/* --- About & Projects Section --- */
+.container { 
+    max-width: 900px; 
+    margin: 0 auto; 
+    padding: 40px 20px; 
+    width: 100%;
+    box-sizing: border-box;
+}
+
+h2 { 
+    font-size: 2.8rem;
+    color: #00bfff; 
+    border-bottom: 2px solid #333; 
+    padding-bottom: 10px; 
+    margin-bottom: 40px;
+}
+
+.project { 
+    margin-bottom: 60px; 
+    background: #16161a; 
+    padding: 30px; 
+    border-radius: 12px; 
+    border-left: 5px solid #00bfff; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.project:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 191, 255, 0.15);
+    border-left-color: #ff8c00;
+}
+
+h3 { 
+    color: #00bfff; 
+    margin-top: 0; 
+    font-size: 1.8rem;
+    transition: color 0.4s ease;
+}
+
+.project:hover h3 {
+    color: #ff8c00;
+}
+
+.video-container {
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #333;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    background: #000;
+}
+
+/* --- Vision Section --- */
+.section-vision .content { 
+    max-width: 900px; 
+    margin: 0 auto; 
+    text-align: center; 
+    padding: 40px 20px; 
+}
+
+.section-vision p { 
+    font-size: 1.3rem; 
+    line-height: 1.8; 
+    color: #bbb; 
+    text-align: justify; 
+    margin-bottom: 25px; 
+}
+
+.highlight { 
+    color: #ff8c00; 
+    font-weight: bold; 
+}
+
+.office-img {
+    width: 100%;
+    max-width: 850px;
+    border-radius: 12px;
+    border: 2px solid #333;
+    box-shadow: 0 10px 30px rgba(0, 191, 255, 0.15);
+    margin: 40px auto 10px auto;
+    display: block;
+    transition: 0.5s;
+}
+
+.office-img:hover {
+    box-shadow: 0 10px 40px rgba(255, 140, 0, 0.3);
+    border-color: #ff8c00;
+    transform: scale(1.02);
+}
+
+.caption {
+    font-size: 0.9rem;
+    color: #777;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* --- Footer --- */
+footer { 
+    background: #050505; 
+    color: #555; 
+    padding: 30px; 
+    text-align: center; 
+    border-top: 1px solid #222; 
+    margin-top: auto; 
+}
+
+footer a { 
+    color: #ff0000; 
+    text-decoration: none; 
+    font-weight: bold; 
+    transition: 0.3s;
+}
+
+footer a:hover {
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+}
+
+/* --- ANIMATIONS (Scroll Effects) --- */
+.hidden-section {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.show-section {
+    opacity: 1;
+    transform: translateY(0);
+}
