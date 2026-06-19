@@ -29,10 +29,35 @@
             letter-spacing: 1px;
         }
 
+        /* Floating Back to Home Button */
+        .back-home-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: rgba(79, 209, 197, 0.15);
+            color: var(--accent-color);
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(79, 209, 197, 0.4);
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .back-home-btn:hover {
+            background: var(--accent-color);
+            color: var(--bg-color);
+            box-shadow: 0 0 15px rgba(79, 209, 197, 0.6);
+            transform: translateY(-2px);
+        }
+
         /* Hero Header Section */
         .hero-section {
             text-align: center;
-            padding: 4rem 2rem;
+            padding: 6rem 2rem 4rem 2rem;
             background: linear-gradient(180deg, #0a192f 0%, var(--bg-color) 100%);
         }
 
@@ -125,6 +150,19 @@
             box-shadow: 0 15px 40px rgba(79, 209, 197, 0.2);
         }
 
+        /* Footer Link Styling */
+        footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+            border-bottom: 1px dashed rgba(79, 209, 197, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #fff;
+            border-bottom: 1px solid #fff;
+        }
+
         /* Mobile Responsiveness */
         @media (max-width: 768px) {
             .story-section, .story-section.reverse {
@@ -135,10 +173,18 @@
             .hero-section h1 {
                 font-size: 2.2rem;
             }
+            .back-home-btn {
+                top: 10px;
+                left: 10px;
+                font-size: 0.8rem;
+                padding: 8px 15px;
+            }
         }
     </style>
 </head>
 <body>
+
+    <a href="index.html" class="back-home-btn">← Back to Creator's Site</a>
 
     <header class="hero-section">
         <img src="image_6.png" alt="Lumi Official Portrait">
@@ -175,7 +221,7 @@
                 <h2>The Discovery of Liquid Neural-Quartz</h2>
                 <p>How did Lumi find the Blizzard Orb? It all began on one of the darkest winter nights. While patrolling the woods, she discovered a hidden rift in the ancient stone, buried beneath meters of heavy snow. Driven by her natural curiosity, she squeezed inside and found a forgotten chamber radiating a faint blue light that shattered the underground darkness.</p>
                 <p>In the center of the cavern lay a mysterious pool of meltwater that refused to freeze, filled with shimmering, perfectly geometric fractal patterns moving as if alive. Lumi reached out and touched the surface with a small paw. Instantly, the electrical energy from her wings fused with the ancient substance—raw, liquid **Neural-Quartz**.</p>
-                <p>The water bubbled, violently spiraling into the air before crystallizing into a flawless, glowing sphere that floated right into her grasp. Since that day, she has protected the valley... until recently, when she began feeling deep subterranean tremors. A tech company named **DAWN** is building a massive, futuristic geodetic dome deep beneath her mountain, venting massive server heat that only her blizzards can cool.</p>
+                <p>The water bubbled, violently spiraling into the air before crystallizing into a flawless, glowing sphere that floated right into her grasp. Since that day, she has protected the valley...</p>
             </div>
             <div class="story-image">
                 <img src="image_4.png" alt="Lumi touching the liquid quartz pool as it transforms into the Blizzard Orb">
@@ -185,7 +231,7 @@
     </main>
 
     <footer style="text-align: center; padding: 2rem; border-top: 1px solid rgba(255,255,255,0.1); color: #718096; margin-top: 2rem;">
-        <p>© 2026 DAWN Labs. The Legend of Lumi.</p>
+        <p>© 2026 DAWN NEURAL. The Legend of Lumi. | <a href="index.html">Back to Creator's Site</a></p>
     </footer>
 
 </body>
