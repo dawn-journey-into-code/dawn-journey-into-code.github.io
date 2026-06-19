@@ -223,3 +223,27 @@ footer a:hover {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* עיצוב לשונית לומי בנאבבר עם תמונת רקע וזוהר ארקטי */
+.lumi-nav-btn {
+    position: relative;
+    /* שילוב של שכבה כהה מעל תמונת הפורטרט כדי שהטקסט יישאר קריא ומקצועי */
+    background: linear-gradient(rgba(5, 11, 20, 0.6), rgba(5, 11, 20, 0.85)), url('image_6.png') no-repeat center;
+    background-size: cover;
+    border: 1px solid rgba(79, 209, 197, 0.4) !important;
+    border-radius: 20px;
+    padding: 6px 18px !important;
+    color: #4fd1c5 !important;
+    text-shadow: 0 0 5px rgba(79, 209, 197, 0.8);
+    box-shadow: 0 0 10px rgba(79, 209, 197, 0.1);
+    transition: all 0.3s ease-in-out !important;
+}
+
+/* אפקט בריחה ומעבר עכבר (Hover) */
+.lumi-nav-btn:hover {
+    background: linear-gradient(rgba(79, 209, 197, 0.25), rgba(5, 11, 20, 0.4)), url('image_6.png') no-repeat center;
+    background-size: cover;
+    box-shadow: 0 0 20px rgba(79, 209, 197, 0.6);
+    color: #ffffff !important;
+    transform: scale(1.05);
+}
