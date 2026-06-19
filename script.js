@@ -1,21 +1,28 @@
 document.addEventListener("DOMContentLoaded", () => {
     
-    // --- 1. גלילה חלקה לקישורי התפריט ---
+    // --- 1. גלילה חלקה לקישורי התפריט ותמיכה בקישורים חיצוניים ---
     const navLinks = document.querySelectorAll('nav a');
 
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            const targetSection = document.getElementById(targetId);
+            const href = this.getAttribute('href');
+            
+            // בודקים אם הקישור הוא עוגן פנימי באותו עמוד (מתחיל בסולמית)
+            if (href && href.startsWith('#')) {
+                e.preventDefault(); // עוצר את הקפיצה הרגילה רק לקישורים פנימיים!
+                
+                const targetId = href.substring(1);
+                const targetSection = document.getElementById(targetId);
 
-            if (targetSection) {
-                // גלילה לאזור המבוקש עם קיזוז קל כדי שהתפריט לא יסתיר את הכותרת
-                window.scrollTo({
-                    top: targetSection.offsetTop - 70, 
-                    behavior: 'smooth'
-                });
+                if (targetSection) {
+                    // גלילה לאזור המבוקש עם קיזוז קל כדי שהתפריט לא יסתיר את הכותרת
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 70, 
+                        behavior: 'smooth'
+                    });
+                }
             }
+            // אם הקישור לא מתחיל בסולמית (כמו 'lumi.html'), הקוד מתעלם והדפדפן יעבור דף כרגיל.
         });
     });
 
