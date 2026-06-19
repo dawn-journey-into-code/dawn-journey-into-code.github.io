@@ -19,25 +19,26 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // --- 2. אנימציות חשיפה בגלילה (Intersection Observer) ---
+    // --- 2. אנימציות חשיפה בגלילה מרובה (Intersection Observer) ---
     const observerOptions = {
         root: null,
         rootMargin: '0px',
         threshold: 0.15 // האנימציה תתחיל כש-15% מהאלמנט נכנס למסך
     };
 
-    const observer = new IntersectionObserver((entries, observer) => {
+    const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // מוסיף את המחלקה שמפעילה את האנימציה
+                // כשהאלמנט נכנס למסך (בגלילה למטה או למעלה) - מפעיל את האנימציה
                 entry.target.classList.add('show-section');
-                // מפסיק לעקוב אחרי האלמנט כדי שהאנימציה תקרה רק פעם אחת
-                observer.unobserve(entry.target); 
+            } else {
+                // כשהאלמנט יוצא מהמסך - מאפס אותו כדי שהאנימציה תקרה שוב בפעם הבאה
+                entry.target.classList.remove('show-section');
             }
         });
     }, observerOptions);
 
-    // תופס את כל האלמנטים המוסתרים ומתחיל לעקוב אחריהם
+    // תופס את כל האלמנטים המוסתרים ומתחיל לעקוב אחריהם ללא הפסקה
     const hiddenElements = document.querySelectorAll('.hidden-section');
     hiddenElements.forEach(el => observer.observe(el));
 });
