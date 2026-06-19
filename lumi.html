@@ -1,1 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumi - Guardian of the Endless Winter | DAWN</title>
+    <style>
+        /* Core styling for a frosty, high-tech ambient atmosphere */
+        :root {
+            --bg-color: #050b14;
+            --text-color: #e2e8f0;
+            --accent-color: #4fd1c5;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+        }
 
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            color: var(--accent-color);
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        /* Hero Header Section */
+        .hero-section {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: linear-gradient(180deg, #0a192f 0%, var(--bg-color) 100%);
+        }
+
+        .hero-section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 50%;
+            box-shadow: 0 0 40px rgba(79, 209, 197, 0.3);
+            width: 300px;
+            margin-bottom: 2rem;
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 0 10px rgba(79, 209, 197, 0.5);
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            color: #a0aec0;
+        }
+
+        /* Story Grid System */
+        .story-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .story-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 4rem;
+            margin-bottom: 6rem;
+            background: var(--glass-bg);
+            padding: 3rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        /* Alternate layout direction for storytelling pacing */
+        .story-section.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .story-text {
+            flex: 1;
+            font-size: 1.1rem;
+        }
+
+        .story-text h2 {
+            font-size: 2rem;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .story-text h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent-color);
+            border-radius: 2px;
+        }
+
+        .story-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .story-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .story-image img:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(79, 209, 197, 0.2);
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .story-section, .story-section.reverse {
+                flex-direction: column;
+                gap: 2rem;
+                padding: 2rem 1rem;
+            }
+            .hero-section h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero-section">
+        <img src="image_6.png" alt="Lumi Official Portrait">
+        <h1>Lumi</h1>
+        <p>Guardian of the Endless Winter and the secrets of the Arctic wilderness.</p>
+    </header>
+
+    <main class="story-container">
+
+        <section class="story-section">
+            <div class="story-text">
+                <h2>A Trail of Light in the Dark Skies</h2>
+                <p>Deep within the frozen, untamed forests of Norway, where the snow never melts, lives Lumi. At first glance, she looks like an ordinary arctic fox with fur as white as pearls. But a closer look reveals a profound wonder: delicate wings rise from her sides, not formed from feathers, but shaped from beams of frozen light and concentrated gusts of wind.</p>
+                <p>When night falls, she spreads her wings and takes flight into the pitch-black sky. As she cuts through the freezing air, her wings react to the Earth's magnetic field, leaving behind a glowing trail of shifting colors. Humans gaze up and call it the "Northern Lights," completely unaware that it is merely the ethereal flight path of one extraordinary little fox.</p>
+            </div>
+            <div class="story-image">
+                <img src="image_0.png" alt="Lumi flying through the night sky leaving an Aurora trail">
+            </div>
+        </section>
+
+        <section class="story-section reverse">
+            <div class="story-text">
+                <h2>An Interface for the Atmosphere</h2>
+                <p>By day, Lumi hides deep inside her safe ice cave, sleeping soundly among the glowing stalactites. She is the true guardian of the valley, and her climate-bending power stems from an ancient, unique artifact she calls the **"Blizzard Orb."**</p>
+                <p>Gazing into its crystal heart, she discovered that the swirling mist inside responds directly to her emotions and thoughts. When she is calm, the inner fog patterns into intricate fractal snowflakes that drift slowly, causing a soft, gentle snowfall outside. But when she is restless, the mist rages into a dark cyclone, triggering fierce winds and heavy blizzards. The orb is more than just magic; it acts as a quantum interface—a way for Lumi to "code" and program the weather, linking her mind directly to the clouds above.</p>
+            </div>
+            <div class="story-image">
+                <img src="image_2.png" alt="Lumi inside her ice cave interacting with the Blizzard Orb">
+            </div>
+        </section>
+
+        <section class="story-section">
+            <div class="story-text">
+                <h2>The Discovery of Liquid Neural-Quartz</h2>
+                <p>How did Lumi find the Blizzard Orb? It all began on one of the darkest winter nights. While patrolling the woods, she discovered a hidden rift in the ancient stone, buried beneath meters of heavy snow. Driven by her natural curiosity, she squeezed inside and found a forgotten chamber radiating a faint blue light that shattered the underground darkness.</p>
+                <p>In the center of the cavern lay a mysterious pool of meltwater that refused to freeze, filled with shimmering, perfectly geometric fractal patterns moving as if alive. Lumi reached out and touched the surface with a small paw. Instantly, the electrical energy from her wings fused with the ancient substance—raw, liquid **Neural-Quartz**.</p>
+                <p>The water bubbled, violently spiraling into the air before crystallizing into a flawless, glowing sphere that floated right into her grasp. Since that day, she has protected the valley... until recently, when she began feeling deep subterranean tremors. A tech company named **DAWN** is building a massive, futuristic geodetic dome deep beneath her mountain, venting massive server heat that only her blizzards can cool.</p>
+            </div>
+            <div class="story-image">
+                <img src="image_4.png" alt="Lumi touching the liquid quartz pool as it transforms into the Blizzard Orb">
+            </div>
+        </section>
+
+    </main>
+
+    <footer style="text-align: center; padding: 2rem; border-top: 1px solid rgba(255,255,255,0.1); color: #718096; margin-top: 2rem;">
+        <p>© 2026 DAWN Labs. The Legend of Lumi.</p>
+    </footer>
+
+</body>
+</html>
